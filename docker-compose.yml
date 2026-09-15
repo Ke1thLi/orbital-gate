@@ -1,0 +1,8 @@
+services:
+  orbital-gate:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - FLAG=flag{local_dev_flag}
+      - SECRET_KEY=${SECRET_KEY}

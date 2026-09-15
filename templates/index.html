@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>Orbital Gate 员工门户</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <h1>Orbital Gate 员工门户</h1>
+            <p class="subtitle">轨道港务 · 内部系统 v2.3</p>
+        </header>
+
+        <section id="auth">
+            <h2>员工登录</h2>
+            <input id="username" placeholder="用户名（3-16 位字母、数字或下划线）" autocomplete="username">
+            <input id="password" type="password" placeholder="密码（至少 6 位）" autocomplete="current-password">
+            <div class="actions">
+                <button id="login">登录</button>
+                <button id="register">注册</button>
+            </div>
+        </section>
+
+        <section id="dashboard" hidden>
+            <h2>欢迎，<span id="who"></span></h2>
+            <p>员工编号：<span id="uid"></span></p>
+            <p>所属部门：<span id="dept"></span></p>
+
+            <div class="actions">
+                <button id="syncBadge">同步门禁徽章</button>
+            </div>
+
+            <h3>同步结果</h3>
+            <pre id="out">尚未同步。</pre>
+        </section>
+
+        <footer>
+            <p>Orbital Gate Internal Portal</p>
+            <p>Challenge by Ke1th</p>
+        </footer>
+    </div>
+
+    <script src="/static/js/admin.js"></script>
+    <script src="/static/js/portal.js"></script>
+    <script src="/static/js/badge.js"></script>
+</body>
+
+</html>
